@@ -143,7 +143,7 @@
                                         <div class="single-input">
                                             <div class="single-input-item">
                                                 <label for="name_organization">Name of Organization</label>
-                                                <input name="name_organization" type="text" placeholder="Name of Organization" class="whitespace-trim" required>
+                                                <input name="name_organization" id="name_organization" type="text" placeholder="Name of Organization" class="whitespace-trim" required>
                                             </div>
                                         </div>
                                         <div class="single-input">
@@ -222,142 +222,142 @@ $(document).ready(function () {
 // Apply validation to the form
     $("#alumni-register").validate({
         rules: {
-            // type_membership: {
-            //     required: true
-            // },
-            // sname: {
-            //     required: true,
-            //     lettersonly: true // Use the custom lettersonly validation
-            // },
+            type_membership: {
+                required: true
+            },
+            sname: {
+                required: true,
+                lettersonly: true // Use the custom lettersonly validation
+            },
             name: {
                 required: true,
                 lettersonly: true // Use the custom lettersonly validation
+            },
+            mname: {
+                required: true,
+                lettersonly: true // Use the custom lettersonly validation
+            },
+            profile: {
+                extension: "jpg|png"
+            },
+            password: {
+                required: true,
+                minlength: 6
+            },
+            password_confirmation: {
+                required: true,
+                equalTo: "#password"
+            },
+            gender: {
+                required: true
+            },
+            dob: {
+                required: true,
+                date: true
+            },
+            admission_year: {
+                required: true
+            },
+            passing_year: {
+                required: true
+            },
+            branch: {
+                required: true
+            },
+            other_isntitute: {
+                required: true
+            },
+            email: {
+                required: true,
+                regexEmail: true // Use the custom regexEmail validation
+            },
+            phone: {
+                required: true,
+                digits: true,
+                minlength: 10,
+                maxlength: 15
+            },
+            address: {
+                required: true
+            },
+            name_organization: {
+                required: true
+            },
+            year: {
+                required: true
+            },
+            job: {
+                required: true
             }
-            // mname: {
-            //     required: true,
-            //     lettersonly: true // Use the custom lettersonly validation
-            // },
-            // profile: {
-            //     extension: "jpg|png"
-            // },
-            // password: {
-            //     required: true,
-            //     minlength: 6
-            // },
-            // password_confirmation: {
-            //     required: true,
-            //     equalTo: "#password"
-            // },
-            // gender: {
-            //     required: true
-            // },
-            // dob: {
-            //     required: true,
-            //     date: true
-            // },
-            // admission_year: {
-            //     required: true
-            // },
-            // passing_year: {
-            //     required: true
-            // },
-            // branch: {
-            //     required: true
-            // },
-            // other_isntitute: {
-            //     required: true
-            // },
-            // email: {
-            //     required: true,
-            //     regexEmail: true // Use the custom regexEmail validation
-            // },
-            // phone: {
-            //     required: true,
-            //     digits: true,
-            //     minlength: 10,
-            //     maxlength: 15
-            // },
-            // address: {
-            //     required: true
-            // },
-            // 'career[]': {
-            //     required: true
-            // },
-            // 'year[]': {
-            //     required: true
-            // },
-            // 'job[]': {
-            //     required: true
-            // }
         },
         messages: {
-            // type_membership: {
-            //     required: "Please select a membership type."
-            // },
-            // sname: {
-            //     required: "Please enter your surname.",
-            //     lettersonly: "Please enter only alphabetic characters in the surname."
-            // },
+            type_membership: {
+                required: "Please select a membership type."
+            },
+            sname: {
+                required: "Please enter your surname.",
+                lettersonly: "Please enter only alphabetic characters in the surname."
+            },
             name: {
                 required: "Please enter your name.",
                 lettersonly: "Please enter only alphabetic characters in the name."
+            },
+            mname: {
+                required: "Please enter your middle name.",
+                lettersonly: "Please enter only alphabetic characters in the middle name."
+            },
+            profile: {
+                extension: "Only jpg and png images are allowed."
+            },
+            password: {
+                required: "Please enter a password.",
+                minlength: "Your password must be at least 6 characters long."
+            },
+            password_confirmation: {
+                required: "Please confirm your password.",
+                equalTo: "Password confirmation does not match."
+            },
+            gender: {
+                required: "Please select your gender."
+            },
+            dob: {
+                required: "Please select your date of birth.",
+                date: "Please enter a valid date."
+            },
+            admission_year: {
+                required: "Please select your year of admission."
+            },
+            passing_year: {
+                required: "Please select your year of passing."
+            },
+            branch: {
+                required: "Please enter your branch."
+            },
+            other_isntitute: {
+                required: "Please provide qualifications obtained from other institutes."
+            },
+            email: {
+                required: "Please enter your email address.",
+                regexEmail: "Please enter a valid email address."
+            },
+            phone: {
+                required: "Please enter your mobile number.",
+                digits: "Please enter a valid phone number.",
+                minlength: "Your phone number must be at least 10 digits.",
+                maxlength: "Your phone number can be a maximum of 15 digits."
+            },
+            address: {
+                required: "Please enter your contact address."
+            },
+            career: {
+                required: "Please enter the name of the organization."
+            },
+            year: {
+                required: "Please select the year of your career."
+            },
+            job: {
+                required: "Please enter your job/designation."
             }
-            // mname: {
-            //     required: "Please enter your middle name.",
-            //     lettersonly: "Please enter only alphabetic characters in the middle name."
-            // },
-            // profile: {
-            //     extension: "Only jpg and png images are allowed."
-            // },
-            // password: {
-            //     required: "Please enter a password.",
-            //     minlength: "Your password must be at least 6 characters long."
-            // },
-            // password_confirmation: {
-            //     required: "Please confirm your password.",
-            //     equalTo: "Password confirmation does not match."
-            // },
-            // gender: {
-            //     required: "Please select your gender."
-            // },
-            // dob: {
-            //     required: "Please select your date of birth.",
-            //     date: "Please enter a valid date."
-            // },
-            // admission_year: {
-            //     required: "Please select your year of admission."
-            // },
-            // passing_year: {
-            //     required: "Please select your year of passing."
-            // },
-            // branch: {
-            //     required: "Please enter your branch."
-            // },
-            // other_isntitute: {
-            //     required: "Please provide qualifications obtained from other institutes."
-            // },
-            // email: {
-            //     required: "Please enter your email address.",
-            //     regexEmail: "Please enter a valid email address."
-            // },
-            // phone: {
-            //     required: "Please enter your mobile number.",
-            //     digits: "Please enter a valid phone number.",
-            //     minlength: "Your phone number must be at least 10 digits.",
-            //     maxlength: "Your phone number can be a maximum of 15 digits."
-            // },
-            // address: {
-            //     required: "Please enter your contact address."
-            // },
-            // 'career[]': {
-            //     required: "Please enter the name of the organization."
-            // },
-            // 'year[]': {
-            //     required: "Please select the year of your career."
-            // },
-            // 'job[]': {
-            //     required: "Please enter your job/designation."
-            // }
         },
         errorPlacement: function (error, element) {
             error.insertAfter(element); // Default placement of errors

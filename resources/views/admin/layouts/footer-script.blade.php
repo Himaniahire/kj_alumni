@@ -24,7 +24,7 @@
 <script src="{{asset('admin_assets/vendor/datatables.net-keytable/js/dataTables.keyTable.min.js')}}"></script>
 <script src="{{asset('admin_assets/vendor/datatables.net-select/js/dataTables.select.min.js')}}"></script>
 
-<script src="{{asset('admin_assets/js/components/table-datatable.js')}}"></script>
+<script src="{{ asset('admin_assets/js/components/table-datatable.js') }}"></script>
 
 
 

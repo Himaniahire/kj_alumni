@@ -117,39 +117,40 @@
                             </div>
                         </div>
 
-                        <div class="offcanvas offcanvas-end w-lg-50" tabindex="-1" id="alumni-details-modal">
-                            <div class="offcanvas-header d-flex flex-wrap gap-2 align-items-start">
-                                <img class="me-2 rounded-circle" id="modal-alumni-img" src="https://via.placeholder.com/40"
-                                    alt="profile image" height="40">
-                                <div class="flex-grow-1">
-                                    <h6 class="fs-16 mb-1" id="modal-alumni-name">Alumni Name</h6>
-                                    <p class="text-muted mb-0" id="modal-alumni-email">Email: </p>
-                                </div>
-                                <div>
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                                        aria-label="Close"></button>
-                                </div>
-                            </div>
-
-                            <div class="offcanvas-body">
-                                <p><strong>Phone:</strong> <span id="modal-alumni-phone"></span></p>
-                                <p><strong>Admission Year:</strong> <span id="modal-alumni-admission"></span></p>
-                                <p><strong>Passing Year:</strong> <span id="modal-alumni-passing"></span></p>
-                                <p><strong>Date of Birth:</strong> <span id="modal-alumni-dob"></span></p>
-                                <p><strong>Branch:</strong> <span id="modal-alumni-branch"></span></p>
-                                <p><strong>Other Institute:</strong> <span id="modal-alumni-other-institute"></span></p>
-                                <p><strong>Job:</strong> <span id="modal-alumni-job"></span></p>
-                                <p><strong>Other Achievements:</strong> <span id="modal-alumni-other-achievements"></span>
-                                </p>
-                            </div>
-                        </div>
-
+                        
 
                     </div> <!-- end card body-->
                 </div> <!-- end card -->
             </div><!-- end col-->
         </div> <!-- end row-->
     </div>
+    <div class="offcanvas offcanvas-end w-lg-50" tabindex="-1" id="alumni-details-modal">
+        <div class="offcanvas-header d-flex flex-wrap gap-2 align-items-start">
+            <img class="me-2 rounded-circle" id="modal-alumni-img" src="https://via.placeholder.com/40"
+                alt="profile image" height="40">
+            <div class="flex-grow-1">
+                <h6 class="fs-16 mb-1" id="modal-alumni-name">Alumni Name</h6>
+                <p class="text-muted mb-0" id="modal-alumni-email">Email: </p>
+            </div>
+            <div>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="offcanvas-body">
+            <p><strong>Phone:</strong> <span id="modal-alumni-phone"></span></p>
+            <p><strong>Admission Year:</strong> <span id="modal-alumni-admission"></span></p>
+            <p><strong>Passing Year:</strong> <span id="modal-alumni-passing"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="modal-alumni-dob"></span></p>
+            <p><strong>Branch:</strong> <span id="modal-alumni-branch"></span></p>
+            <p><strong>Other Institute:</strong> <span id="modal-alumni-other-institute"></span></p>
+            <p><strong>Job:</strong> <span id="modal-alumni-job"></span></p>
+            <p><strong>Other Achievements:</strong> <span id="modal-alumni-other-achievements"></span>
+            </p>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
