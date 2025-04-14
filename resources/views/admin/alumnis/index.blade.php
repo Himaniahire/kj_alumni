@@ -99,7 +99,7 @@
                                                         </button>
                                                         <form action="{{ route('alumnis.destroy', $alumni->id) }}"
                                                             method="POST"
-                                                            onsubmit="return confirm('Are you sure you want to delete this role?');">
+                                                            onsubmit="return confirm('Are you sure you want to delete this Alumni?');">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="submit"

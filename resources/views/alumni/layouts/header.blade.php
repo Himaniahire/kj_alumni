@@ -45,7 +45,7 @@
                 <div class="dropdown">
                     <a class="topbar-link dropdown-toggle drop-arrow-none px-2" data-bs-toggle="dropdown"
                         data-bs-offset="0,25" type="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="{{ asset('alumni_profile/' . $alumni->profile) }}" width="32" class="rounded-circle me-lg-2 d-flex"
+                        <img src="{{ asset('alumni_profile/' . Auth::guard('alumni')->user()->profile) }}" width="32" class="rounded-circle me-lg-2 d-flex"
                             alt="user-image">
                         <span class="d-lg-flex flex-column gap-1 d-none">
                             <h5 class="my-0">{{ Auth::guard('alumni')->user()->name }} {{ Auth::guard('alumni')->user()->sname }}</h5>

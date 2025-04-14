@@ -67,11 +67,11 @@
                                 <div class="single-input">
                                     <div class="single-input-item">
                                         <label for="password">Password</label>
-                                        <input type="text" name="password" id="password" placeholder="Password" class="whitespace-trim" required>
+                                        <input type="password" name="password" id="password" placeholder="Password" class="whitespace-trim" required>
                                     </div>
                                     <div class="single-input-item">
                                         <label for="password_confirmation">Confirm Password</label>
-                                        <input type="text" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" class="whitespace-trim" required>
+                                        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" class="whitespace-trim" required>
                                     </div>
                                 </div>
                                 <div class="single-input">

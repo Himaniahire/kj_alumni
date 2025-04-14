@@ -61,3 +61,35 @@ Thank you and have a wonderful day ahead of you.
 
 Sincerely,
 Himani Ahire
+
+Leaving for the day
+
+Here are the work updates of 17-03-2025 :
+
+    (A) Aaleskhassociates: 
+        - Admin:
+            -   Multiple Input Update Form Done
+            -   Testing And Live Done
+    (B) Ambika:
+            -   Import Excel Done
+
+Thank you and have a wonderful day ahead of you.
+
+Sincerely,
+Himani Ahire
+
+Leaving for the day
+
+Here are the work updates of 17-03-2025 :
+
+    (A) Ambika:
+         - Changes and Testing Done 
+         -   New Databse Create Saperate The database Done
+         -   Old Database Joint to Demo server Done
+         -   Summary/Invoice/Performa NO. Formate change Done
+         -   Demo Changes Deploy in main server Done
+
+Thank you and have a wonderful day ahead of you.
+
+Sincerely,
+Himani Ahire
