@@ -118,7 +118,7 @@
                             </div>
                         </div>
 
-                        
+
 
                     </div> <!-- end card body-->
                 </div> <!-- end card -->
@@ -176,7 +176,7 @@
                 var otherInstitute = $(this).data('other-institute');
                 var job = $(this).data('job');
                 var otherAchievements = $(this).data('other-achievements');
-                var profile = $(this).data('profile'); 
+                var profile = $(this).data('profile');
 
                 // Set the data in the modal
                 $('#modal-alumni-name').text(name);
@@ -203,10 +203,10 @@
             });
         });
     </script>
-    
+
     @endsection
-    
+
     @section('footer-script')
-    
-    
+
+
 @endsection

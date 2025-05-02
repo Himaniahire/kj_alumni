@@ -30,7 +30,7 @@
                             @endif
                             @if(Session::has('success'))
                             <div class="alert alert-success" id="success-alert">
-                                {{ Session::get('success')}} 
+                                {{ Session::get('success')}}
                             </div>
                             @endif
                             @csrf
@@ -39,7 +39,7 @@
                                 <div class="single-input">
                                     <div class="single-input-item">
                                         <label for="type_membership">Type Of Membership</label>
-                                        <select name="type_membership" id="type_membership">
+                                        <select name="type_membership" id="type_membership" required>
                                             <option value="">Select </option>
                                             <option value="1">Patron</option>
                                             <option value="2">Donor</option>
@@ -186,6 +186,7 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 @endsection
 @section('footer_script')
 <!--<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>-->
@@ -206,6 +207,12 @@
             }
         }, 3000); // 3000 ms = 3 seconds
     </script>
+=======
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+>>>>>>> 265cc981e453c7f4f6fccdaa883aa41a099a472e
 <script>
 $(document).ready(function () {
 
@@ -391,6 +398,11 @@ $(document).ready(function () {
         }
     });
 });
+<<<<<<< HEAD
+=======
+
+</script>
+>>>>>>> 265cc981e453c7f4f6fccdaa883aa41a099a472e
 
 </script>
 @endsection
