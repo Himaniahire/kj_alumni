@@ -7,6 +7,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::controller(App\Http\Controllers\HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/contact', 'contact')->name('contact');
+});
 
 Route::controller(App\Http\Controllers\AlumniRegisterController::class)->group(function () {
     Route::get('/register', 'register')->name('alumni.register');

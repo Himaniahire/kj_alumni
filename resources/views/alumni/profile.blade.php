@@ -12,8 +12,9 @@
                 </div>
 
                 <div class="card-body">
-                    <div class="row">
                         <form action="{{route('alumni.profile.update', $alumni->id)}}" method="POST" enctype="multipart/form-data" id="alumni-update">
+                    <div class="row">
+                        
                             @csrf
                             @method('put')
                             @if ($errors->any())
@@ -45,7 +46,9 @@
 
                                     <div class="mb-3">
                                         <label for="profile" class="form-label">Profile</label>
-                                        <input type="file" id="profile" name="profile" class="form-control" accept=".jpg,.png">
+                                        <input type="file" id="profile" name="profile" class="form-control mb-3" accept=".jpg,.png">
+                                        <!--<br>-->
+                                        <img src="{{ asset($alumni->profile) }}" width="100px" height="100px">
                                     </div>
 
                                     <div class="mb-3">
@@ -152,8 +155,9 @@
 
                             </div> <!-- end col -->
                             <button class="btn btn-primary">Update</button>
-                        </form>
                     </div>
+                        </form>
+                       
                     <!-- end row-->
                 </div> <!-- end card-body -->
             </div> <!-- end card -->

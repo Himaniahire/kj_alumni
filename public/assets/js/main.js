@@ -32,7 +32,6 @@
             rtsJs.wowActive();
             rtsJs.stickySidebar();
             rtsJs.datePicker();
-            rtsJs.yearPicker();
             rtsJs.magnificPopup();
             rtsJs.countDownTimer();
             rtsJs.sideMenu();
@@ -154,13 +153,13 @@
                     ...defaults,
                     ...optionsData
                   };
-
+              
                   //console.log(options);
                   // init
                   new Swiper(swiper, options);
                 });
               }
-
+              
             })
 
         },
@@ -185,10 +184,10 @@
                 $(".search-input-area").removeClass("show");
                 $("#anywhere-home").removeClass("bgshow");
             });
-
+            
             $(document).ready(function() {
               $(document).on('click', '.translate__lang a', function(e) {
-                  e.preventDefault();
+                  e.preventDefault(); 
                   var selectedLanguage = $(this).text();
                   $(".selected__lang").text(selectedLanguage);
               });
@@ -202,76 +201,76 @@
               });
           });
         },
-
-
+       
+      
 
         niceSelect: function(){
             $('.select').each(function() {
                 var select = $(this),
                     name = select.attr('name');
-
+                
                 select.hide();
-
+                
                 select.wrap('<div class="nice-select-wrap"></div>');
-
+                
                 var parent = select.parent('.nice-select-wrap');
-
+                
                 parent.append('<ul id=' + name + ' style="display:none"></ul>');
-
+                
                 select.find('option').each(function() {
-
+              
                   var option = $(this),
                       value = option.attr('value'),
                       label = option.text();
-
+                  
                   if (option.is(":first-child")) {
-
+                    
                     $('<a href="#" class="drop">' + label + '</a>').insertBefore(parent.find('ul'));
-
+                    
                   } else {
-
+                    
                     parent.find('ul').append('<li><a href="#" id="' + value + '">' + label + '</a></li>');
-
+                    
                   }
-
+                  
                 });
-
+                
                 parent.find('a').on('click', function(e) {
-
+                  
                   parent.toggleClass('down').find('ul').slideToggle(300);
-
+                  
                   e.preventDefault();
-
+                
                 });
-
+                
                 parent.find('ul a').on('click', function(e) {
-
+                  
                   var niceOption = $(this),
                           value = niceOption.attr('id'),
                       text = niceOption.text();
-
+                  
                   select.val(value);
-
+                  
                   parent.find('.drop').text(text);
-
+                  
                   e.preventDefault();
-
+                
                 });
-
+                
             });
         },
 
         backToTopInit: function () {
           $(document).ready(function(){
           "use strict";
-
+      
           var progressPath = document.querySelector('.progress-wrap path');
           var pathLength = progressPath.getTotalLength();
           progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
           progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
           progressPath.style.strokeDashoffset = pathLength;
           progressPath.getBoundingClientRect();
-          progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+          progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
           var updateProgress = function () {
             var scroll = $(window).scrollTop();
             var height = $(document).height() - $(window).height();
@@ -279,7 +278,7 @@
             progressPath.style.strokeDashoffset = progress;
           }
           updateProgress();
-          $(window).scroll(updateProgress);
+          $(window).scroll(updateProgress);	
           var offset = 50;
           var duration = 550;
           jQuery(window).on('scroll', function() {
@@ -288,16 +287,16 @@
             } else {
               jQuery('.progress-wrap').removeClass('active-progress');
             }
-          });
+          });				
           jQuery('.progress-wrap').on('click', function(event) {
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, duration);
             return false;
           })
-
-
+          
+          
         });
-
+  
         },
         vedioActivation: function () {
           $(document).ready(function(){
@@ -329,7 +328,7 @@
 			  }
 			  let lastScroll = 0;
 			  $(document).ready(sticky_header);
-			  $(window).on('load scroll resize', sticky_header);
+			  $(window).on('load scroll resize', sticky_header);	
 		  },
         progressAvtivation: function () {
           $(window).scroll(function () {
@@ -365,44 +364,34 @@
             });
           });
         },
-        yearPicker: function () {
-            $(document).ready(function () {
-                $('#yearpicker').datepicker({
-                    format: "yyyy",            // Only year format
-                    viewMode: "years",         // Initial view mode
-                    minViewMode: "years",      // Disable months/days selection
-                    autoclose: true
-                });
-            });
-        },
         countDownTimer: function(){
           function makeTimer() {
 
-            // var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");
-              var endTime = new Date("29 April 2025 9:56:00 GMT+01:00");
+            // var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
+              var endTime = new Date("29 April 2025 9:56:00 GMT+01:00");			
                 endTime = (Date.parse(endTime) / 1000);
-
+          
                 var now = new Date();
                 now = (Date.parse(now) / 1000);
-
+          
                 var timeLeft = endTime - now;
-
-                var days = Math.floor(timeLeft / 86400);
+          
+                var days = Math.floor(timeLeft / 86400); 
                 var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
                 var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
                 var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
-
+            
                 if (hours < "10") { hours = "0" + hours; }
                 if (minutes < "10") { minutes = "0" + minutes; }
                 if (seconds < "10") { seconds = "0" + seconds; }
-
+          
                 $("#day").html(days );
                 $("#hour").html(hours );
                 $("#minute").html(minutes );
-                $("#second").html(seconds );
-
+                $("#second").html(seconds );		
+          
             }
-
+          
             setInterval(function() { makeTimer(); }, 1000);
         },
         magnificPopup: function (){
@@ -439,23 +428,23 @@
 
     rtsJs.m();
     $('.moving').mousemove(function(e){
-
+      
       var wx = $(window).width();
       var wy = $(window).height();
-
+      
       var x = e.pageX - this.offsetLeft;
       var y = e.pageY - this.offsetTop;
-
+      
       var newx = x - wx/2;
       var newy = y - wy/2;
-
+      
       $('.rt-shape .shape').each(function(){
         var speed = $(this).attr('data-speed');
         if($(this).attr('data-revert')) speed *= -1;
         TweenMax.to($(this), 1, {x: (1 - newx*speed), y: (1 - newy*speed)});
-
+        
       });
-
+      
     });
 
 

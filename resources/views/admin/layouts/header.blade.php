@@ -3,15 +3,15 @@
         <div class="d-flex align-items-center gap-2">
 
             <!-- Brand Logo -->
-            <a href="index.html" class="logo">
+            <a href="{{route('index')}}" class="logo">
                 <span class="logo-light">
-                    <span class="logo-lg"><img src="{{asset('logo.png')}}" alt="logo"></span>
-                    <span class="logo-sm"><img src="{{asset('favicon-v.png')}}" alt="small logo"></span>
+                    <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="logo"></span>
+                    <span class="logo-sm"><img src="{{ asset('logo/logo1.jpeg') }}" alt="small logo"></span>
                 </span>
 
                 <span class="logo-dark">
-                    <span class="logo-lg"><img src="{{asset('logo.png')}}" alt="dark logo"></span>
-                    <span class="logo-sm"><img src="{{asset('favicon-v.png')}}" alt="small logo"></span>
+                    <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="dark logo"></span>
+                    <span class="logo-sm"><img src="{{ asset('logo/logo1.jpeg') }}" alt="small logo"></span>
                 </span>
             </a>
 
@@ -45,8 +45,8 @@
                 <div class="dropdown">
                     <a class="topbar-link dropdown-toggle drop-arrow-none px-2" data-bs-toggle="dropdown"
                         data-bs-offset="0,25" type="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="" width="32" class="rounded-circle me-lg-2 d-flex"
-                            alt="user-image">
+                        <!--<img src="" width="32" class="rounded-circle me-lg-2 d-flex"-->
+                        <!--    alt="user-image">-->
                         <span class="d-lg-flex flex-column gap-1 d-none">
                             <h5 class="my-0">{{ Auth::guard('web')->user()->name }} {{ Auth::guard('web')->user()->sname }}</h5>
                         </span>
@@ -55,7 +55,7 @@
                     <div class="dropdown-menu dropdown-menu-end">
                         <!-- item-->
                         <div class="dropdown-header noti-title">
-                            <h6 class="text-overflow m-0">Welcome !</h6>
+                            <h6 class="text-overflow m-0">Welcome !{{ Auth::guard('web')->user()->name }} {{ Auth::guard('web')->user()->sname }}</h6>
                         </div>
 
                         <!-- item-->

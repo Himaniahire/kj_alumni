@@ -47,17 +47,19 @@ class AlumniPanelController extends Controller
         ]);
 
         // File upload
-        if ($request->hasFile('profile')) {
+       if ($request->hasFile('profile')) {
             // Delete old profile if exists
             if ($alumni->profile && file_exists(public_path('alumni_profile/' . $alumni->profile))) {
                 unlink(public_path('alumni_profile/' . $alumni->profile));
             }
-
+        
             $file = $request->file('profile');
-            $filename = time() . '_' . $file->getClientOriginalName();
+            $originalName = $file->getClientOriginalName();
+            $cleanName = str_replace(' ', '_', $originalName); // Replace spaces with underscores
+            $filename = $cleanName;
             $file->move(public_path('alumni_profile'), $filename);
-
-            $alumni->profile = $filename; // Save just the file name or path
+            $filePath = 'alumni_profiles/' . $filename;
+            $alumni->profile = $filePath; // Save just the file name or path
         }
 
         // Update password if provided

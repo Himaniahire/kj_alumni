@@ -42,7 +42,12 @@ class AlumniRegisterController extends Controller
         // File upload
         $filePath = null;
         if ($request->hasFile('profile')) {
-            $filePath = $request->file('profile')->store('alumni_profiles', 'public');
+            $file = $request->file('profile');
+            $originalName = $file->getClientOriginalName();
+            $cleanName = str_replace(' ', '_', $originalName);
+            $fileName = $cleanName;
+            $file->move(public_path('alumni_profiles'), $fileName);
+            $filePath = 'alumni_profiles/' . $fileName;
         }
 
         Alumni::create([

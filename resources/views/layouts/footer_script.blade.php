@@ -1,5 +1,9 @@
  <!-- jquery js -->
- <script src="{{asset('assets/js/vendor/jquery.min.js')}}"></script>
+ <!--<script src="{{asset('assets/js/vendor/jquery.min.js')}}"></script>-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+ 
+<!--<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>-->
  <!-- bootstrap 5.0.2 -->
  <script src="{{asset('assets/js/plugins/bootstrap.min.js')}}"></script>
  <!-- jquery ui js -->

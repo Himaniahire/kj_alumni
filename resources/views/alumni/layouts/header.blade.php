@@ -3,14 +3,14 @@
         <div class="d-flex align-items-center gap-2">
 
             <!-- Brand Logo -->
-            <a href="index.html" class="logo">
+            <a href="{{route('index')}}" class="logo">
                 <span class="logo-light">
-                    <span class="logo-lg"><img src="{{asset('logo.png')}}" alt="logo"></span>
+                    <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="logo"></span>
                     <span class="logo-sm"><img src="{{asset('favicon-v.png')}}" alt="small logo"></span>
                 </span>
 
                 <span class="logo-dark">
-                    <span class="logo-lg"><img src="{{asset('logo.png')}}" alt="dark logo"></span>
+                    <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="dark logo"></span>
                     <span class="logo-sm"><img src="{{asset('favicon-v.png')}}" alt="small logo"></span>
                 </span>
             </a>
@@ -45,7 +45,7 @@
                 <div class="dropdown">
                     <a class="topbar-link dropdown-toggle drop-arrow-none px-2" data-bs-toggle="dropdown"
                         data-bs-offset="0,25" type="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="{{ asset('alumni_profile/' . $alumni->profile) }}" width="32" class="rounded-circle me-lg-2 d-flex"
+                        <img src="{{ asset(Auth::guard('alumni')->user()->profile) }}" width="32" class="rounded-circle me-lg-2 d-flex"
                             alt="user-image">
                         <span class="d-lg-flex flex-column gap-1 d-none">
                             <h5 class="my-0">{{ Auth::guard('alumni')->user()->name }} {{ Auth::guard('alumni')->user()->sname }}</h5>

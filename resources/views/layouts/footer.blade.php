@@ -1,78 +1,85 @@
-  <!-- footer -->
-  <footer class="footer v__1">
+<footer class="rts-footer rts-footer-padding v_2">
     <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="footer__widget">
-                    <div class="footer__widget--logo">
-                        <a href="index-2.html"><img src="assets/images/logo/logo__white.svg" alt="logo"></a>
-                    </div>
-                    <p class="footer__widget--description">
-                        We are passionate education dedicated to providing high-quality resources learners
-                        all backgrounds.
-                    </p>
-                    <div class="footer__widget--social">
-                        <ul class="social">
-                            <li class="social__link"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li class="social__link"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li class="social__link"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                            <li class="social__link"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                        </ul>
+        <div class="row justify-content-center">
+            <div class="rts-footer-newsletter">
+                <div class="col-lg-10">
+                    <div class="rts-newsletter-box-content">
+                        <h4 class="newsletter-title">Subscribe To Newsletter
+                        </h4>
+                        <div class="newsletter-form w-530">
+                            <form action="#">
+                                <input type="email" name="subscription" id="subscription" placeholder="Enter Your mail" required="">
+                                <button type="submit" class="rts-nbg-btn btn-arrow">Subscribe <span><i class="fa-sharp fa-regular fa-arrow-right"></i></span></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer__widget">
-                    <h6 class="footer__widget--title">Our Campus</h6>
-                    <div class="footer__widget--menu">
-                        <ul>
-                            <li><a href="academic.html">Academic</a></li>
-                            <li><a href="athletics.html">Athletics</a></li>
-                            <li><a href="campus-life.html">Campus life</a></li>
-                            <li><a href="reasearch.html">Research</a></li>
-                            <li><a href="academic-area.html">Academic Area</a></li>
-                        </ul>
+        </div>
+        <div class="row gy-5 gy-lg-0">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="rts-footer-widget w-320">
+                    <a href="{{route('index')}}" class="d-block rts-footer-logo mb--40">
+                        <img src="assets/images/logo/logo__white.svg" alt="Unipix">
+                    </a>
+                    <p>
+                        Empowering Future Engineers with Knowledge, Skills, and Innovation.
+                    </p>
+                    <div class="rts-contact-link">
+                        <a href="https://maps.app.goo.gl/ZuqMZSyXRVeQ6U1A6"><i class="fa-sharp fa-light fa-location-dot"></i> Shri K. J. Polytechnic,
+                            GIDC, Near Narmada Canal,
+                            Bharuch, Gujarat - 392001, India </a>
+                        <a href="tel:911234567890"><i class="fa-thin fa-phone"></i> +91 123 456 7890</a>
+                        <a href="tel:919876543210"><i class="fa-thin fa-phone"></i> +91 987 654 3210</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6">
-                <div class="footer__widget">
-                    <h6 class="footer__widget--title">Our Campus</h6>
-                    <div class="footer__widget--menu">
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-4">
+                <div class="rts-footer-widget ml--30">
+                    <h6 class="rt-semi">Our Campus</h6>
+                    <div class="rts-footer-menu">
                         <ul>
-                            <li><a href="about.html">About </a></li>
-                            <li><a href="tution-fee.html">Tution Fee</a></li>
-                            <li><a href="alumni.html">Alumni</a></li>
-                            <li><a href="faculty.html">Faculty Staff</a></li>
-                            <li><a href="event.html">Event</a></li>
+                            <li><a href="{{route('index')}}">Home </a></li>
+                            <li><a href="{{ route('about') }}">About </a></li>
+                            <li><a href="#">Alumni</a></li>
+                            <li><a href="#">Faculty Staff</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="footer__widget">
-                    <h6 class="footer__widget--title">Quick Button</h6>
-                    <div class="footer__widget--button">
-                        <a href="admission.html" class="cta__button active">Applying</a>
-                        <a href="scholarship.html" class="cta__button">scholarship</a>
+            <div class="col-lg-4 col-md-6 col-sm-8">
+                <div class="rts-footer-widget ml--30">
+                    <h6 class="rt-semi">Recent Post</h6>
+                    <div class="rts-post-widget">
+                        <ul class="list-unstyled">
+                            <li class="single-post">
+                                <a href="#" class="blog-thumb">
+                                    <img src="assets/images/blog/w-1.jpg" alt="latest post">
+                                </a>
+                                <div class="post-content">
+                                    <span class="rt-date">October 29, 2023</span>
+                                    <a href="#">
+                                        Avoid These 4 Common When Managing Remote Teams
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="single-post">
+                                <a href="#" class="blog-thumb">
+                                    <img src="assets/images/blog/small-thumb-1.jpg" alt="latest post">
+                                </a>
+                                <div class="post-content">
+                                    <span class="rt-date">October 29, 2023</span>
+                                    <a href="#">
+                                        Avoid These 4 Common When Managing Remote Teams
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </footer>
-<!-- footer end -->
-
-<!-- footer copyright -->
-<div class="copyright">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="copyright__wrapper">
-                    <p>Copyright &copy; 2024 All Rights Reserved by <a href="#">Unipix</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- footer copyright end -->
