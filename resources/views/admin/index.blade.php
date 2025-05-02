@@ -1,7 +1,7 @@
 @extends('admin.layouts.layout')
-
+@section('subtitle', 'Dashboard')
 @section('content')
-
+<div class="page-container">
     <h1>Welcome, {{ Auth::guard('web')->user()->name }} {{ Auth::guard('web')->user()->sname }}!</h1>
      <div class="row row-cols-xxl-4 row-cols-md-2 row-cols-1">
                         <div class="col">
@@ -157,5 +157,6 @@
                         </div><!-- end col -->
 
                     </div>
+                </div>
 
 @endsection

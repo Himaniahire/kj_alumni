@@ -42,7 +42,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth:web'], function () {
     });
     Route::controller(App\Http\Controllers\AlumniController::class)->group(function () {
         Route::get('/alumnis', 'index')->name('alumnis.index');
-        Route::get('/alumnis/show', 'show')->name('alumnis.show');
+        Route::get('/alumnis/show/{id}', 'show')->name('alumnis.show');
         Route::delete('/alumnis/{id}', 'destroy')->name('alumnis.destroy');
 
 

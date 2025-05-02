@@ -3,12 +3,12 @@
     <!-- Brand Logo -->
     <a href="{{route('index')}}" class="logo">
         <span class="logo-light">
-            <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="logo"></span>
+            <span class="logo-lg"><img src="{{ asset('logo/logo.png') }}" alt="logo"></span>
             <span class="logo-sm"><img src="{{asset('favicon-v.png')}}" alt="small logo"></span>
         </span>
 
         <span class="logo-dark">
-            <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="dark logo"></span>
+            <span class="logo-lg"><img src="{{ asset('logo/logo.png') }}" alt="dark logo"></span>
             <span class="logo-sm"><img src="{{asset('favicon-v.png')}}" alt="small logo"></span>
         </span>
     </a>

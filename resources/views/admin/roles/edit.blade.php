@@ -1,5 +1,5 @@
 @extends('admin.layouts.layout')
-
+@section('subtitle', 'Roles')
 @section('content')
 
 <div class="page-container">

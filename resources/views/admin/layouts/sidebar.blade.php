@@ -3,13 +3,13 @@
     <!-- Brand Logo -->
     <a href="{{route('index')}}" class="logo">
         <span class="logo-light">
-            <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="logo"></span>
-            <span class="logo-sm"><img src="{{ asset('logo/logo1.jpeg') }}" alt="small logo"></span>
+            <span class="logo-lg"><img src="{{ asset('logo/logo.png') }}" alt="logo"></span>
+            <span class="logo-sm"><img src="{{ asset('logo/logo.png') }}" alt="small logo"></span>
         </span>
 
         <span class="logo-dark">
-            <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="dark logo"></span>
-            <span class="logo-sm"><img src="{{ asset('logo/logo1.jpeg') }}" alt="small logo"></span>
+            <span class="logo-lg"><img src="{{ asset('logo/logo.png') }}" alt="dark logo"></span>
+            <span class="logo-sm"><img src="{{ asset('logo/logo.png') }}" alt="small logo"></span>
         </span>
     </a>
 
@@ -39,14 +39,20 @@
             </li>
             <li class="side-nav-item">
                 <a href="{{ route('roles.index') }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-icon"><i class="ti ti-user-square-rounded"></i></span>
                     <span class="menu-text">Role</span>
                 </a>
             </li>
             <li class="side-nav-item">
                 <a href="{{ route('alumnis.index') }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-icon"><i class="ti ti-briefcase"></i></span>
                     <span class="menu-text">Alumnis</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{route('admin.logout')}}"  class="side-nav-link">
+                    <i class="ri-logout-box-line me-1 fs-16 align-middle"></i>
+                    <span class="align-middle">Sign Out</span>
                 </a>
             </li>
         </ul>

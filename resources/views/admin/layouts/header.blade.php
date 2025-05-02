@@ -5,13 +5,13 @@
             <!-- Brand Logo -->
             <a href="{{route('index')}}" class="logo">
                 <span class="logo-light">
-                    <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="logo"></span>
-                    <span class="logo-sm"><img src="{{ asset('logo/logo1.jpeg') }}" alt="small logo"></span>
+                    <span class="logo-lg"><img src="{{ asset('logo/logo.png') }}" alt="logo"></span>
+                    <span class="logo-sm"><img src="{{ asset('logo/logo.png') }}" alt="small logo"></span>
                 </span>
 
                 <span class="logo-dark">
-                    <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="dark logo"></span>
-                    <span class="logo-sm"><img src="{{ asset('logo/logo1.jpeg') }}" alt="small logo"></span>
+                    <span class="logo-lg"><img src="{{ asset('logo/logo.png') }}" alt="dark logo"></span>
+                    <span class="logo-sm"><img src="{{ asset('logo/logo.png') }}" alt="small logo"></span>
                 </span>
             </a>
 
@@ -29,7 +29,7 @@
             <div class="topbar-item d-none d-md-flex px-2">
 
                 <div>
-                    <h4 class="page-title fs-20 fw-semibold mb-0">Dashboard</h4>
+                    <h4 class="page-title fs-20 fw-semibold mb-0">@yield('subtitle')</h4>
 
                 </div>
 
@@ -52,9 +52,9 @@
                         </span>
                         <i class="ri-arrow-down-s-line d-none d-lg-block align-middle ms-1"></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-end">
+                    {{-- <div class="dropdown-menu dropdown-menu-end"> --}}
                         <!-- item-->
-                        <div class="dropdown-header noti-title">
+                        {{-- <div class="dropdown-header noti-title">
                             <h6 class="text-overflow m-0">Welcome !{{ Auth::guard('web')->user()->name }} {{ Auth::guard('web')->user()->sname }}</h6>
                         </div>
 
@@ -65,11 +65,11 @@
                         </a> --}}
 
                         <!-- item-->
-                        <a href="{{route('admin.logout')}}" class="dropdown-item active fw-semibold text-danger">
+                        {{-- <a href="{{route('admin.logout')}}" class="dropdown-item active fw-semibold text-danger">
                             <i class="ri-logout-box-line me-1 fs-16 align-middle"></i>
                             <span class="align-middle">Sign Out</span>
-                        </a>
-                    </div>
+                        </a> --}}
+                    {{-- </div> --}}
                 </div>
             </div>
         </div>

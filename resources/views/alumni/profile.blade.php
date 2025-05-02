@@ -1,5 +1,5 @@
 @extends('alumni.layouts.layout')
-
+@section('subtitle', 'Profile')
 @section('content')
 
 <div class="page-container">
@@ -14,7 +14,7 @@
                 <div class="card-body">
                         <form action="{{route('alumni.profile.update', $alumni->id)}}" method="POST" enctype="multipart/form-data" id="alumni-update">
                     <div class="row">
-                        
+
                             @csrf
                             @method('put')
                             @if ($errors->any())
@@ -157,7 +157,7 @@
                             <button class="btn btn-primary">Update</button>
                     </div>
                         </form>
-                       
+
                     <!-- end row-->
                 </div> <!-- end card-body -->
             </div> <!-- end card -->

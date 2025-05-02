@@ -30,8 +30,8 @@
         <div class="row g-0 justify-content-center w-100 m-xxl-5 px-xxl-4 m-3">
             <div class="col-xxl-3 col-lg-5 col-md-6">
                 <a href="{{route('index')}}" class="auth-brand d-flex justify-content-center mb-2">
-                    <img src="{{ asset('logo/logo1.jpeg') }}" alt="dark logo" height="150" class="logo-dark">
-                    <img src="{{ asset('logo/logo1.jpeg') }}" alt="logo light" height="26" class="logo-light">
+                    <img src="{{ asset('logo/logo.png') }}" alt="dark logo" height="150" class="logo-dark">
+                    <img src="{{ asset('logo/logo.png') }}" alt="logo light" height="26" class="logo-light">
                 </a>
 
                 <p class="fw-semibold mb-4 text-center text-muted fs-15"></p>

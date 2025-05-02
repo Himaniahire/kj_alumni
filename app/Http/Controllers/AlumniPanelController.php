@@ -11,7 +11,8 @@ class AlumniPanelController extends Controller
 {
     public function index()
     {
-        return view("alumni.index");
+        $alumni = Alumni::find(Auth::guard('alumni')->user()->id);
+        return view("alumni.index", compact("alumni"));
     }
 
     public function profile(Request $request)
@@ -52,7 +53,7 @@ class AlumniPanelController extends Controller
             if ($alumni->profile && file_exists(public_path('alumni_profile/' . $alumni->profile))) {
                 unlink(public_path('alumni_profile/' . $alumni->profile));
             }
-        
+
             $file = $request->file('profile');
             $originalName = $file->getClientOriginalName();
             $cleanName = str_replace(' ', '_', $originalName); // Replace spaces with underscores

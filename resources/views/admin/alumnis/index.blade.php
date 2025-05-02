@@ -1,5 +1,5 @@
 @extends('admin.layouts.layout')
-
+@section('subtitle', 'Alumni')
 @section('content')
     <div class="page-container">
 
@@ -76,7 +76,7 @@
                                                 <td>
                                                     <div class="hstack gap-1 justify-content-end">
 
-                                                        <a data-bs-toggle="offcanvas" href="#alumni-details-modal"
+                                                        {{-- <a data-bs-toggle="offcanvas" href="#alumni-details-modal"
                                                             data-id="{{ $alumni->id }}"
                                                             data-name="{{ $alumni->name }} {{ $alumni->sname }}"
                                                             data-email="{{ $alumni->email }}"
@@ -90,6 +90,11 @@
                                                             data-job="{{ $alumni->job }}"
                                                             data-profile="{{ $alumni->profile }}"
                                                             data-other-achievements="{{ $alumni->other_achivements }}"
+                                                            class="btn btn-soft-primary btn-icon btn-sm rounded-circle view-alumni-details"
+                                                            title="View Details">
+                                                            <i class="ti ti-eye fs-16"></i>
+                                                        </a> --}}
+                                                        <a href="{{ route('alumnis.show', $alumni->id) }}"
                                                             class="btn btn-soft-primary btn-icon btn-sm rounded-circle view-alumni-details"
                                                             title="View Details">
                                                             <i class="ti ti-eye fs-16"></i>
@@ -125,7 +130,7 @@
             </div><!-- end col-->
         </div> <!-- end row-->
     </div>
-    <div class="offcanvas offcanvas-end w-lg-50" tabindex="-1" id="alumni-details-modal">
+    {{-- <div class="offcanvas offcanvas-end w-lg-50" tabindex="-1" id="alumni-details-modal">
         <div class="offcanvas-header d-flex flex-wrap gap-2 align-items-start">
             <img class="me-2 rounded-circle" id="modal-alumni-img" src=""
                 alt="profile image" height="40">
@@ -150,7 +155,7 @@
             <p><strong>Other Achievements:</strong> <span id="modal-alumni-other-achievements"></span>
             </p>
         </div>
-    </div>
+    </div> --}}
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -158,49 +163,49 @@
 
     <script>
         $(document).ready(function() {
-            var alumniProfilePath = '{{ asset('') }}';
+            // var alumniProfilePath = '{{ asset('') }}';
 
-            // Manually initialize the offcanvas if necessary
-            var myOffcanvas = new bootstrap.Offcanvas(document.getElementById('alumni-details-modal'));
+            // // Manually initialize the offcanvas if necessary
+            // var myOffcanvas = new bootstrap.Offcanvas(document.getElementById('alumni-details-modal'));
 
-            $(".view-alumni-details").click(function() {
-                // Fetch data from the clicked button's data attributes
-                var name = $(this).data('name');
-                var email = $(this).data('email');
-                var phone = $(this).data('phone');
-                var admissionYear = $(this).data('admission-year');
-                var passingYear = $(this).data('passing-year');
-                var profile = $(this).data('profile');
-                var dob = $(this).data('dob');
-                var branch = $(this).data('branch');
-                var otherInstitute = $(this).data('other-institute');
-                var job = $(this).data('job');
-                var otherAchievements = $(this).data('other-achievements');
-                var profile = $(this).data('profile');
+            // $(".view-alumni-details").click(function() {
+            //     // Fetch data from the clicked button's data attributes
+            //     var name = $(this).data('name');
+            //     var email = $(this).data('email');
+            //     var phone = $(this).data('phone');
+            //     var admissionYear = $(this).data('admission-year');
+            //     var passingYear = $(this).data('passing-year');
+            //     var profile = $(this).data('profile');
+            //     var dob = $(this).data('dob');
+            //     var branch = $(this).data('branch');
+            //     var otherInstitute = $(this).data('other-institute');
+            //     var job = $(this).data('job');
+            //     var otherAchievements = $(this).data('other-achievements');
+            //     var profile = $(this).data('profile');
 
-                // Set the data in the modal
-                $('#modal-alumni-name').text(name);
-                $('#modal-alumni-email').text('Email: ' + email);
-                $('#modal-alumni-phone').text(phone);
-                $('#modal-alumni-admission').text(admissionYear);
-                $('#modal-alumni-passing').text(passingYear);
-                $('#modal-alumni-dob').text('Date of Birth: ' + dob);
-                $('#modal-alumni-branch').text('Branch: ' + branch);
-                $('#modal-alumni-other-institute').text('Other Institute: ' + otherInstitute);
-                $('#modal-alumni-job').text('Job: ' + job);
-                $('#modal-alumni-other-achievements').text('Other Achievements: ' + otherAchievements);
+            //     // Set the data in the modal
+            //     $('#modal-alumni-name').text(name);
+            //     $('#modal-alumni-email').text('Email: ' + email);
+            //     $('#modal-alumni-phone').text(phone);
+            //     $('#modal-alumni-admission').text(admissionYear);
+            //     $('#modal-alumni-passing').text(passingYear);
+            //     $('#modal-alumni-dob').text('Date of Birth: ' + dob);
+            //     $('#modal-alumni-branch').text('Branch: ' + branch);
+            //     $('#modal-alumni-other-institute').text('Other Institute: ' + otherInstitute);
+            //     $('#modal-alumni-job').text('Job: ' + job);
+            //     $('#modal-alumni-other-achievements').text('Other Achievements: ' + otherAchievements);
 
-                // Set the profile image if available
-                if (profile) {
-                    $('#modal-alumni-img').attr('src', alumniProfilePath + '' +
-                    profile); // Adjust this path accordingly
-                } else {
-                    $('#modal-alumni-img').attr('src', 'https://via.placeholder.com/40'); // Fallback image
-                }
+            //     // Set the profile image if available
+            //     if (profile) {
+            //         $('#modal-alumni-img').attr('src', alumniProfilePath + '' +
+            //         profile); // Adjust this path accordingly
+            //     } else {
+            //         $('#modal-alumni-img').attr('src', 'https://via.placeholder.com/40'); // Fallback image
+            //     }
 
-                // Open the modal manually
-                myOffcanvas.show();
-            });
+            //     // Open the modal manually
+            //     myOffcanvas.show();
+            // });
         });
     </script>
 

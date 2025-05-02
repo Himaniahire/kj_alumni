@@ -5,12 +5,12 @@
             <!-- Brand Logo -->
             <a href="{{route('index')}}" class="logo">
                 <span class="logo-light">
-                    <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="logo"></span>
+                    <span class="logo-lg"><img src="{{ asset('logo/logo.png') }}" alt="logo"></span>
                     <span class="logo-sm"><img src="{{asset('favicon-v.png')}}" alt="small logo"></span>
                 </span>
 
                 <span class="logo-dark">
-                    <span class="logo-lg"><img src="{{ asset('logo/logo1.jpeg') }}" alt="dark logo"></span>
+                    <span class="logo-lg"><img src="{{ asset('logo/logo.png') }}" alt="dark logo"></span>
                     <span class="logo-sm"><img src="{{asset('favicon-v.png')}}" alt="small logo"></span>
                 </span>
             </a>
@@ -29,7 +29,7 @@
             <div class="topbar-item d-none d-md-flex px-2">
 
                 <div>
-                    <h4 class="page-title fs-20 fw-semibold mb-0">Dashboard</h4>
+                    <h4 class="page-title fs-20 fw-semibold mb-0">@yield('subtitle')</h4>
 
                 </div>
 
