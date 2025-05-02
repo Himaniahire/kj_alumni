@@ -20,7 +20,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="rts-footer-widget w-320">
                     <a href="{{route('index')}}" class="d-block rts-footer-logo mb--40">
-                        <img src="assets/images/logo/logo__white.svg" alt="Unipix">
+                        <img src="{{ asset('logo/logo-white.png')}}" alt="Unipix">
                     </a>
                     <p>
                         Empowering Future Engineers with Knowledge, Skills, and Innovation.

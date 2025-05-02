@@ -5,7 +5,7 @@
                 <div class="header__wrapper">
                     <div class="header__logo">
                         <a href="{{route('index')}}" class="header__logo--link">
-                            <img src="{{ asset('logo/logo.png') }}" alt="unipix">
+                            <img src="{{ asset('logo/logo.png') }}" alt="unipix" style="height: 100px">
                         </a>
                     </div>
                     <div class="header__menu">
